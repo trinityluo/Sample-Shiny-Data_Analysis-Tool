@@ -25,3 +25,5 @@ vignettes/*.pdf
 .Rproj.user
 # rstudio project file
 sample-shiny-analysis-tool.Rproj
+packrat/lib*/
+packrat/src/
