@@ -1,0 +1,66 @@
+---
+# Rmarkdown document YAML setting. css style using modified bootstrap css file.
+
+title: "Wine Data Analysis Report"
+date: "`r format(Sys.time(), ' %B %d, %Y')`"
+author: "XL & JJ"
+output: 
+  html_document:
+    css: bootstrap.css
+    highlight: tango
+    # toc: true
+    # toc_float:
+    #   collapsed: true
+    #   smooth_scroll: true
+    # toc:depth: 0
+    
+# params:
+#   filename: 'test.csv'
+---
+
+```{r setup, include=FALSE, message=FALSE, results="asis"}
+knitr::opts_chunk$set(echo = FALSE)
+
+# a <- data.frame(ID = sample(1:10000, 10), A1 = stri_rand_strings(5, 10, '[A-Z]'), B1 = sample(seq(as.Date('1999/01/01'), as.Date('2000/01/01'), by="day"), 10))
+# write.csv(a, 'test.csv')
+
+
+
+uploadedData <- read.csv(file=as.character(params$filename),
+                      stringsAsFactors = F)
+# uploadedData <- read.csv(file='test.csv',
+#                       stringsAsFactors = F)
+```
+
+## This is the sample report
+### Will show how many columns & rows were in the uploaded data
+
+```{r}
+names(uploadedData)
+nrow(uploadedData)
+summary(uploadedData)
+```
+## Column Names:
+```{r}
+names(uploadedData)
+
+```
+
+## Number of Rows:
+```{r}
+nrow(uploadedData)
+```
+
+## Data Summary
+```{r}
+summary(uploadedData)
+```
+
+# View of Data
+```{r}
+kable(uploadedData)
+```
+
+
+
+
