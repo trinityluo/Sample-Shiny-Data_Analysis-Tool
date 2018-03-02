@@ -24,10 +24,21 @@ knitr::opts_chunk$set(echo = FALSE)
 # a <- data.frame(ID = sample(1:10000, 10), A1 = stri_rand_strings(5, 10, '[A-Z]'), B1 = sample(seq(as.Date('1999/01/01'), as.Date('2000/01/01'), by="day"), 10))
 # write.csv(a, 'test.csv')
 
+# extract file extention in order to use different method to read
+pattern <- DOT %R% capture(or('csv', 'xlsx')) %R% END
+fileType <- str_match(params$filename, pattern)[, 2]
+
+if(fileType == 'csv') {
+  uploadedData <- read.csv(file=as.character(params$filename),
+                        stringsAsFactors = F)
+} else if (fileType == 'xlsx') {
+  
+  uploadedData <- read_excel(as.character(params$filename))
+  
+}
 
 
-uploadedData <- read.csv(file=as.character(params$filename),
-                      stringsAsFactors = F)
+
 # uploadedData <- read.csv(file='test.csv',
 #                       stringsAsFactors = F)
 ```

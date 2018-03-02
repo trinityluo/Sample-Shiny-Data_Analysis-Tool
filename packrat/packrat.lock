@@ -189,6 +189,12 @@ Version: 0.3.6
 Hash: f6fa1ff1db422a2c5227be30cab6c273
 Requires: Rcpp, digest
 
+Package: htmlwidgets
+Source: CRAN
+Version: 1.0
+Hash: f34dd51a49b6d2947bc853223897854b
+Requires: htmltools, jsonlite, yaml
+
 Package: httpuv
 Source: CRAN
 Version: 1.3.6.1
@@ -332,6 +338,35 @@ Source: CRAN
 Version: 1.0.0
 Hash: 4ddf09fdec11e2f253fb2beb17330aaa
 Requires: Rcpp, cellranger, tibble
+
+Package: rebus
+Source: CRAN
+Version: 0.1-3
+Hash: 0219fe87da93d9aea111f8381829b843
+Requires: rebus.base, rebus.datetimes, rebus.numbers, rebus.unicode
+
+Package: rebus.base
+Source: CRAN
+Version: 0.0-3
+Hash: 400cdbe545c425591348364a56dd708c
+
+Package: rebus.datetimes
+Source: CRAN
+Version: 0.0-1
+Hash: e0f12528dd69d0e2ec3f674a61dd35e5
+Requires: rebus.base
+
+Package: rebus.numbers
+Source: CRAN
+Version: 0.0-1
+Hash: d74a0beae93f1f28956105ff578b39d2
+Requires: rebus.base
+
+Package: rebus.unicode
+Source: CRAN
+Version: 0.0-2
+Hash: ec2d5cef0325d53666cb41f91045c0d4
+Requires: rebus.base
 
 Package: rematch
 Source: CRAN

@@ -23,9 +23,9 @@ shinyUI(fluidPage(theme=shinytheme("flatly"),
   titlePanel("Wine Data Analysis"),
   sidebarLayout(
     sidebarPanel(
-      fileInput('reportFile', 'Choose the CSV file to upload',
+      fileInput('reportFile', 'Choose the file to upload',
                 accept = c(
-                '.csv'
+                '.csv', '.xlsx'
                 )),
       
 
