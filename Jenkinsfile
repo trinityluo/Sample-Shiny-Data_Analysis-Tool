@@ -14,7 +14,7 @@ pipeline {
       steps {
         sshPublisher(publishers: [sshPublisherDesc(configName: 'shiny@gcp', transfers: [sshTransfer(excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: true, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: "${remotePath}/${projectName}", remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/*'), sshTransfer(excludes: '', execCommand: '''
         docker exec --user shiny shiny-server /bin/bash  \
-        -c "cd /srv/shiny-server/${projectName} &&  \
+        -c "cd /srv/shiny-server/$projectName &&  \
         pwd &&  \
         Rscript -e 'packrat::restore()' && \
         touch restart.txt"
