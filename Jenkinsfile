@@ -8,7 +8,8 @@ pipeline {
     }
     stage('Development') {
       steps {
-        sshPublisher failOnError: true, publishers: [sshPublisherDesc(configName: 'jenkins@gcp', transfers: [sshTransfer(excludes: '', execCommand: 'pwd', execTimeout: 120000, flatten: false, makeEmptyDirs: true, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'archive', sourceFiles: 'archive/**/*')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)]
+        sshPublisher(publishers: [sshPublisherDesc(configName: 'jenkins@gcp', transfers: [sshTransfer(excludes: '', execCommand: '''mkdir -p /mnt/disks/data/shiny-server/shinyapps/sample-shiny-analysis-tool
+cd /mnt/disks/data/shiny-server/shinyapps/sample-shiny-analysis-tool''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: ''), sshTransfer(excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'archive', sourceFiles: 'archive/**/*')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
       }
     }
   }
