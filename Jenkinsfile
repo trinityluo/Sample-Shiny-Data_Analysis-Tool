@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     projectName = 'sample-shiny-analysis-tool'
-    remotePath = '/mnt/disks/data/shiny-server/shinyapps'
+    remotePath = 'shiny-server/shinyapps'
   }
   stages {
     stage('Build') {
