@@ -1,6 +1,6 @@
 PackratFormat: 1.4
 PackratVersion: 0.4.8.1
-RVersion: 3.4.2
+RVersion: 3.4.3
 Repos: BioCsoft=https://bioconductor.org/packages/3.5/bioc,
     BioCann=https://bioconductor.org/packages/3.5/data/annotation,
     BioCexp=https://bioconductor.org/packages/3.5/data/experiment,
@@ -392,8 +392,8 @@ Hash: 647e2e50a72557d1a770dcd6701e562b
 
 Package: rmarkdown
 Source: CRAN
-Version: 1.8
-Hash: 2a7842e3cee62a79dd737d17e9e9d86b
+Version: 1.9
+Hash: ab7f84e6f41ed8d8e8b9a2031cf631f8
 Requires: base64enc, evaluate, htmltools, jsonlite, knitr, mime,
     rprojroot, stringr, yaml
 
