@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        archiveArtifacts '*'
+        archiveArtifacts(artifacts: '*', defaultExcludes: true)
       }
     }
   }
