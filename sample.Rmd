@@ -20,7 +20,7 @@ output:
 
 ```{r setup, include=FALSE, message=FALSE, results="asis"}
 knitr::opts_chunk$set(echo = FALSE)
-
+suppressMessages(library(rebus))
 # a <- data.frame(ID = sample(1:10000, 10), A1 = stri_rand_strings(5, 10, '[A-Z]'), B1 = sample(seq(as.Date('1999/01/01'), as.Date('2000/01/01'), by="day"), 10))
 # write.csv(a, 'test.csv')
 
