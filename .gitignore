@@ -24,6 +24,6 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 # rstudio project file
-sample-shiny-analysis-tool.Rproj
+*.Rproj
 packrat/lib*/
 packrat/src/

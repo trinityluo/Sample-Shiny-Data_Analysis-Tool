@@ -1,6 +1,8 @@
 
 
 source("helpers.R")
+options(shiny.fullstacktrace = TRUE)
+options(shiny.error = browser)
 
 shinyUI(fluidPage(theme=shinytheme("flatly"),
                   useShinyjs(),
